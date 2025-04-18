@@ -37,7 +37,7 @@ public class Billing {
             bw.newLine();
             bw.close();
 
-            System.out.println("Bill generated: ₹" + amount);
+            System.out.println("Bill generated: $" + amount);
         } catch (IOException e) {
             System.out.println("Error generating bill.");
         }
@@ -51,7 +51,7 @@ public class Billing {
                 String[] parts = line.split(",");
                 if (parts[0].equals(customerId)) {
                     System.out.println("Month: " + parts[1] + ", Units: " + parts[2] +
-                                       ", Amount: ₹" + parts[3] + ", Status: " + parts[4]);
+                                       ", Amount: $" + parts[3] + ", Status: " + parts[4]);
                 }
             }
         } catch (IOException e) {
